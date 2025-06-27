@@ -214,22 +214,7 @@ header {
   color: #444;
   margin-bottom: 15px;
 }
-.btn-cta {  
-  background-color: #0057a8;
-  color: white;
-  padding: 12px 24px;
-  border-radius: 6px;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  text-align: center;
-  margin-bottom: 0;
-  margin-top: 20px;
-}
-.agenda-card .btn-cta:hover {
-  background-color: #0056b3;
-  transform: scale(1.05);
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.836);
-}
+
 /* === ICONO SECCIÓN GENERAL === */
 .icono-seccion {
   font-size: 1.5rem;
@@ -383,7 +368,7 @@ header {
   border-radius: 12px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.692);
   animation: fadeInUp 1.5s ease;
-  backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);  
 }
 .doctor-sidebar img {
   width: 100%;
@@ -420,12 +405,15 @@ header {
 .btn-cta {
   display: inline-block;
   margin-top: 10px;
+  margin-bottom: 10px;
   background-color: #007BFF;
   color: white;
   padding: 12px 28px;
-  border-radius: 8px;
+  width: 100%;
+  max-width: 250px;
+  border-radius: 999px;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 1.1rem;
   transition: background-color 0.3s ease;
 }
 .btn-cta i {
@@ -445,7 +433,7 @@ header {
 .doctor-main h3 {
   font-size: 1.4rem;
   color: #1e3a8a;
-  margin-top: 30px;
+  margin-top: 20px;
   display: flex;
   align-items: center;
   gap: 10px;
@@ -454,7 +442,7 @@ header {
   font-size: 1rem;
   color: #4b5563;
   margin-top: 10px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
   line-height: 1.6;
 }
 .doctor-main ul {
@@ -562,7 +550,7 @@ header {
 }
 .ubicacion h2 {
   font-size: 2rem;
-  color: #1e3a8a;
+  color: white;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -571,7 +559,7 @@ header {
   max-width: 800px;
   margin: 0 auto 40px;
   font-size: 1.1rem;
-  color: #374151;
+  color: rgba(255, 255, 255, 0.788);
   line-height: 1.6;
 }
 .contacto-wrapper {
@@ -583,29 +571,36 @@ header {
 }
 .datos-contacto {
   flex: 1 1 300px;
-  background: #ffffff;
+  background: #00154e;
+  height: 540px;
   padding: 25px;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.932);
 }
-.datos-contacto h3 {
-  margin-bottom: 20px;
+
+.datos-contacto h3, .datos-contacto h2 {
+  margin-bottom: 10px;
   font-size: 1.3rem;
-  color: #1e40af;
+  color: white;
 }
-.datos-contacto ul {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 20px;
-}
-.datos-contacto li {
+.datos-contacto p {
   margin-bottom: 10px;
   font-size: 1rem;
-  color: #444;
+  color: rgba(255, 255, 255, 0.788);
 }
 .datos-contacto a {
-  color: #2563eb;
+  color: rgba(255, 255, 255, 0.788);
   text-decoration: none;
+}
+.contact-link {
+  color: rgba(255, 255, 255, 0.788);
+  text-decoration: none;
+  display: inline-flex;
+  transition: transform 0.3s ease, color 0.3s ease;
+}
+.contact-link:hover {
+  transform: translateY(-3px) scale(1.03);
+  color: #00ffa6; /* o el color que desees al hacer hover */
 }
 .botones-contacto {
   display: flex;
@@ -613,36 +608,223 @@ header {
   gap: 10px;
 }
 .btn-contacto {
-  background-color: #2563eb;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 8px;
+  display: inline-block;
+  background-color: #004bad8a;
+  color: white;
+  padding: 10px 25px;
+  font-size: 1.1rem;
+  font-weight: 500;
+  border-radius: 999px;
   text-decoration: none;
-  transition: background 0.3s ease;
+  margin-top: 10px;
+  margin-left: 25px;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 6px 14px rgba(0, 1, 2, 0.726);
 }
 .btn-contacto:hover {
-  background-color: #1d4ed8;
+  background-color: #016be6;
+  transform: scale(1.05);
 }
 .btn-contacto.whatsapp {
-  background-color: #25D366;
+  background-color: #109240;
+  margin-left: 20px;
 }
 .btn-contacto.whatsapp:hover {
-  background-color: #1ebe5d;
+  background-color: #00ff00de;
+  transform: scale(1.05);
 }
 .mapa {
-  flex: 1 1 400px;
+  flex: 1 1 300px;
   border-radius: 12px;
+  height: 540px;
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0,0,0,0.05);
 }
+.mapa iframe {
+  width: 100%;
+  height: 100%;
+  display: block;
+  border: 0;
+}
+
+.seguros-section {
+  padding: 60px 20px;
+  background-color: #ffffff;
+}
+
+.seguros-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: 40px;
+}
+
+.seguros-info,
+.seguros-beneficios {
+  flex: 1 1 400px;
+}
+
+.seguros-info h2 {
+  font-size: 2.5rem;
+  color: #1e3a8a;
+  margin-bottom: 5px;
+}
+
+.seguros-info .intro {
+  font-size: 1.5rem;
+  color: #374151;
+  line-height: 1.6;    
+}
+
+.seguros-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.seguros-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 1.2rem;
+  color: #1f2937;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.seguros-list i {
+  color: #16a34a;
+  font-size: 1.2rem;
+  flex-shrink: 0; /* evita que el ícono se reduzca */
+  margin-top: 2px; /* alinea verticalmente con el texto */
+}
+
+/* Galería de logos */
+.seguros-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 0 10px; /* mínimo margen a los lados */
+}
+
+.seguros-logos img {
+  width: calc(16% - 10px); /* 4 por fila */
+  height: 150px;
+  object-fit: contain;
+  filter: grayscale(30%);
+  transition: transform 0.3s ease, filter 0.3s ease;
+  /* ❌ sin fondo, sin borde, sin sombra */
+  background: none;
+  border: none;
+  padding: 0;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+.seguros-logos img:hover {
+  transform: scale(1.05);
+  filter: grayscale(0%);
+}
+.fade-in-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-in-up.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+
 /* === FOOTER === */
 footer {
   background-color: #00154e;
   color: rgb(255, 255, 255);
   text-align: center;
   padding: 1.5rem 1rem;
-  margin-top: 2rem;
+  
 }
+
+.whatsapp-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }  
+
+  @keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(0, 73, 230, 0.6); }
+    70% { box-shadow: 0 0 0 16px rgba(0, 230, 118, 0); }
+    100% { box-shadow: 0 0 0 0 rgba(0, 230, 118, 0); }
+  }
+
+   
+  .urgencia-label {
+  background-color: #f80606ec;
+  color: white;
+  padding: 5px 12px;
+  font-size: 0.75rem;
+  border-radius: 20px;
+  margin-bottom: 6px;
+  font-weight: bold;
+  white-space: nowrap;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+/* Botón flotante con icono y texto */
+/* Estado inicial: botón pequeño */
+.whatsapp-float {
+  position: relative;
+  background-color: #004badec;
+  color: white;
+  font-size: 24px;
+  height: 52px;
+  width: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(0, 73, 230, 0.8),
+              0 0 20px rgba(0, 138, 230, 0.4);
+  animation: pulse 1.6s infinite;
+  transition: transform 0.3s ease, border-radius 0.3s ease, padding 0.3s ease;
+  overflow: hidden;
+  padding: 0 16px;
+  white-space: nowrap;
+  transform-origin: right center; /* 👈 Clave visual */
+}
+
+/* Oculta el texto al inicio */
+.btn-text {
+  display: none;
+  font-size: 0.85rem;
+  margin-left: 8px;
+  white-space: nowrap;
+}
+
+/* Hover: efecto de crecimiento desde la derecha */
+.whatsapp-float:hover {
+  width: auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  border-radius: 12px;
+}
+
+/* Muestra el texto solo en hover */
+.whatsapp-float:hover .btn-text {
+  display: inline-block;
+}
+
+.whatsapp-float:hover i {
+  transform: scale(1.1);
+}
+
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
  
@@ -715,18 +897,20 @@ footer {
     text-align: center;         
   }
 
-  .hero-wrapper,
-  .hero-bottom-row {
+  .hero-wrapper {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30px;
+    width: 100%;
+    padding: 0 5px; /* deja márgenes mínimos a los lados */
+    box-sizing: border-box;
   }
   .filosofia-row {
     flex-direction: column;
     margin-top: 100px;
   }
   .filosofia-col {
-    width: 375px;
+    width: 100%;
     max-width: 100%;    
     margin-top: 10px;
   }
@@ -735,22 +919,29 @@ footer {
     max-width: 100%;
   }
   .doctor-image-box img {
-    height: auto;
-    max-height: 90vh;
+    height: auto;   
     margin-top: 30px;
   }
   .doctor-note {
     position: static;
-    width: 380px;
+    width: 100%;
     max-width: 100%;
     margin-top: 10px;
   }
   .agenda-card {
     height: auto;
-    width: 380px;
-    max-width: 100%;
-    padding: 10px;
+    width: 100%;
+    max-width: 100%;    
     margin-bottom: 30px;
+  }
+  .btn-cta {
+    padding: 14px 16px;      /* 🔽 reduce tamaño visual */
+    font-size: 1rem;
+    border-radius: 999px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    width: 100%;
+    max-width: 250px;
   }
 
   /* SOBRE EL DOCTOR */
@@ -759,7 +950,7 @@ footer {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 0 10px; /* deja márgenes mínimos a los lados */
+    padding: 0 5px; /* deja márgenes mínimos a los lados */
     box-sizing: border-box;
   }
 
@@ -783,7 +974,7 @@ footer {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 0 10px; /* deja márgenes mínimos a los lados */
+    padding: 0 5px; /* deja márgenes mínimos a los lados */
     box-sizing: border-box; 
 
   }
@@ -805,32 +996,17 @@ footer {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    padding: 0 10px; /* deja márgenes mínimos a los lados */
+    padding: 0 5px; /* deja márgenes mínimos a los lados */
     box-sizing: border-box;    
   }
-  .ubicacion-contacto{
+  .datos-contacto{
     margin-top: 50px;
+    height: auto;
   }
-  .contacto-wrapper {
-    flex-direction: column;
-    gap: 30px;
+  .mapa{
+    margin-bottom: 50px;
   }
-
-  .datos-contacto,
-  .mapa {
-    width: 100%;
-    max-width: 100%;
-  }
-
-  .btn-contacto {
-    width: 100%;
-    text-align: center;
-  }
-
-  iframe {
-    width: 100% !important;
-    height: 300px !important;
-  }
+ 
 
   /* BOTONES */
   .btn-cta {
@@ -843,6 +1019,37 @@ footer {
   .doctor-note {
     border-radius: 10px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  }
+  .seguros-section{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    padding: 0 5px; /* deja márgenes mínimos a los lados */
+    box-sizing: border-box;    
+  }
+  .seguros-info h2{
+    font-size: 1.5rem;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+    margin-top: 50px;    
+  }
+    .seguros-info .intro{
+    font-size: 1rem;
+    width: 100%;
+    max-width: 100%;
+    text-align: center;    
+  }
+  .seguros-list li{
+    font-size: 1rem;
+    width: 100%;
+    max-width: 100%;
+    text-align: left;    
+  }
+  .seguros-logos img {
+    width: calc(20% - 10px); /* 2 por fila */
+    height: 80px;
   }
 
   footer {
